@@ -8,6 +8,7 @@ class Activity {
   final String type;
   final String link;
   final String key;
+
   Activity({
     required this.activity,
     required this.type,

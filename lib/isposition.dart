@@ -1,4 +1,4 @@
-import 'dart:convert';
+
 
 import 'package:ano/apisee.dart';
 import 'package:ano/modals/newmodel.dart';
@@ -31,12 +31,12 @@ class _IspositionState extends State<Isposition> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Space station postioning "),
+        title: const Text("Space station postioning "),
         centerTitle: true,
       ),
       body: Stack(children: [
         Container(
-          decoration: BoxDecoration(
+          decoration:const  BoxDecoration(
             color: Color.fromARGB(255, 237, 234, 227),
             // image: const DecorationImage(
             //   image: NetworkImage('https://example.com/image.jpg'),
@@ -50,7 +50,7 @@ class _IspositionState extends State<Isposition> {
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.end,
                       children: [
-                        Text("timestamp"),
+                        const Text("timestamp"),
                         Text(obj1!.timestamp.toString())
                       ],
                     ),
@@ -64,13 +64,13 @@ class _IspositionState extends State<Isposition> {
                       ),
                       Text(
                         obj1!.issPosition!.longitude!,
-                        style: TextStyle(color: Colors.white),
+                        style: const TextStyle(color: Colors.white),
                       )
                     ],
                   ),
                 )
               : Container(
-                  child: Center(child: CircularProgressIndicator()),
+                  child: const Center(child: CircularProgressIndicator()),
                   // decoration: BoxDecoration(
                   //   image: DecorationImage(
                   //     image: NetworkImage('https://picsum.photos/200'),
@@ -86,6 +86,9 @@ class _IspositionState extends State<Isposition> {
                   fit: BoxFit.fill,
                   opacity: 0.9)),
         ),
+        ElevatedButton(onPressed: (){
+          
+        }, child: const Text("map view")),
       ]),
       floatingActionButton: FloatingActionButton(
         onPressed: () {

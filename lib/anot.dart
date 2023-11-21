@@ -1,6 +1,3 @@
-import 'dart:developer';
-
-import 'package:ano/apisee.dart';
 import 'package:ano/modals/api_modals.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -46,7 +43,7 @@ class _AnotState extends State<Anot> {
             ),
             TextFormField(
                 decoration:
-                    InputDecoration(hintText: "username", labelText: "pass"),
+                    const InputDecoration(hintText: "username", labelText: "pass"),
                 controller: name1),
             Column(
                 children: act != null
@@ -67,7 +64,7 @@ class _AnotState extends State<Anot> {
                         builder: (context) => const Free(),
                       ));
                 },
-                child: Text("submit")),
+                child: const Text("submit")),
           ],
         ),
       ),
